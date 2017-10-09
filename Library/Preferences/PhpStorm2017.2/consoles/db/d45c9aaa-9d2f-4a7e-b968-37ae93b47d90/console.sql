@@ -1,0 +1,1 @@
+CREATE DATABASE `todo_local` DEFAULT  CHARACTER SET = 'utf8';
