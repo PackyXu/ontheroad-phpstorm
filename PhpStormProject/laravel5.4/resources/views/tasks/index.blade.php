@@ -1,0 +1,1 @@
+@extends('layouts.master')@section('title','laravel5.4 from phpstorm')@section('content')    <h1>tasks index page</h1>@endsection
