@@ -14,4 +14,13 @@
 /*Route::get('/', function () {
     return view('welcome');
 });*/
-Route::get('/',['as'=>'tasks.index','uses'=>'TasksController@index']);
+    Route::get('/',['as'=>'tasks.index','uses'=>'TasksController@index']);
+    Route::get('/',function (){
+        return view('home');
+    });
+    Route::get('/about',function (){
+       return view('about');
+    });
+    Route::get('/contact',function (){
+        return view('contact');
+    });

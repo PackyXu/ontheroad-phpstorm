@@ -1,0 +1,1 @@
+@extends('layouts.master')@section('content')    <div class="col-xs-12 col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">        <div class="row">            <h1>about page</h1>        </div>    </div>@endsection
