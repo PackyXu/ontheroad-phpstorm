@@ -1,0 +1,1 @@
+ <footer id="footer" class="nav navbar-inverse navbar-fixed-bottom text-center">        <p>Copyright 2017 &copy; OnTheRoad</p>        <p><i class="glyphicon glyphicon-envelope"></i> <a href="mailto:https://ruiyon.xu@gmail.com" class="mail-color"> Emial: ruiyon.xu@gmail.com</a></p>        <p>Designed By OnTheRoad</p>        <p>Powered By Laravel</p> </footer>

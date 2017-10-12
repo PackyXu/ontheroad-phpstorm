@@ -27,3 +27,11 @@
     Route::get('/help',function (){
         return view('help');
     });
+    Route::post('/contact/submit','ContactController@index');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
