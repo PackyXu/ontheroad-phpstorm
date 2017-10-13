@@ -11,11 +11,11 @@
 |
 */
 
-/*Route::get('/', function () {
+Route::get('/', function () {
     return view('welcome');
-});*/
-    Route::get('/',['as'=>'tasks.index','uses'=>'TasksController@index']);
-    Route::get('/',function (){
+});
+    /*Route::get('/',['as'=>'tasks.index','uses'=>'TasksController@index']);*/
+   /* Route::get('/',function (){
         return view('home');
     });
     Route::get('/about',function (){
@@ -26,12 +26,28 @@
     });
     Route::get('/help',function (){
         return view('help');
-    });
+    });*/
     Route::post('/contact/submit','ContactController@index');
-Auth::routes();
+    Route::any('/messages','ContactController@show');
 
-Route::get('/home', 'HomeController@index')->name('home');
+    //Route::get('/', 'HomeController@index');
+    Route::get('/about', 'HomeController@getAbout');
+    Route::get('/contact', 'HomeController@getContact');
+    Route::get('/help', 'HomeController@getHelp');
+//Route::get('/home', 'HomeController@index')->name('home');
 
-Auth::routes();
+    Auth::routes();
+    /**
+     * Home User
+     */
+    Route::get('/home', 'HomeController@index');
 
-Route::get('/home', 'HomeController@index')->name('home');
+    /*
+     * Admin
+     **/
+    Route::prefix('admin')->group(function (){
+        Route::get('/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');
+        Route::post('/login', 'Auth\AdminLoginController@login')->name('admin.login.submit');
+        Route::get('/', 'AdminController@index')->name('admin.dashboard');
+    });
+
