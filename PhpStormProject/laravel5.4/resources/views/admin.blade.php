@@ -15,6 +15,8 @@
                     @endif
 
                     You are logged in! <strong>Admin</strong>
+                    {{--@component('components.who')
+                    @endcomponent--}}
                 </div>
             </div>
 
